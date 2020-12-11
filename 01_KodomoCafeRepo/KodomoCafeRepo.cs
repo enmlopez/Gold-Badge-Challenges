@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace _01_KodomoCafeRepo
 {
-    public static class KomodoCafeDatabase
-    {
-        public static List<KodomoMeals> _meals = new List<KodomoMeals>();
-    }
+    //public static class KomodoCafeDatabase
+    //{
+    //    public static List<KodomoMeals> _meals = new List<KodomoMeals>();
+    //}
     public class KodomoCafeRepo
     {
-        private List<KodomoMeals> _listofCafeItems = KomodoCafeDatabase._meals;
+        private List<KodomoMeals> _listofCafeItems = new List<KodomoMeals>();
 
         //Create
         public void AddItemsToMenu(KodomoMeals meals)
@@ -50,7 +50,7 @@ namespace _01_KodomoCafeRepo
         {
             foreach (KodomoMeals meals in _listofCafeItems)
             {
-                if(meals.MealNumber == mealId)
+                if(meals.ItemNumber == mealId)
                 {
                     return meals;
                 }
