@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_KodomoClaimsRepo", "02_K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_KodomoClaimsTest", "02_KodomoClaimsTest\02_KodomoClaimsTest.csproj", "{59CAD25A-C544-49C0-88D0-7803B08C6FDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_KomodoInsurance", "03_KomodoInsurance\03_KomodoInsurance.csproj", "{C7953C0E-19B1-4712-B0A5-CA0A1C2926F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_KomodoInsuranceRepo", "03_KomodoRepo\03_KomodoInsuranceRepo.csproj", "{BAACFBF9-2186-4245-8261-41C4FB6FB6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_TestKodomoInsurance", "03_TestKodomoInsurance\03_TestKodomoInsurance.csproj", "{27142127-1495-4316-B402-6AE4F4FD83D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +51,18 @@ Global
 		{59CAD25A-C544-49C0-88D0-7803B08C6FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CAD25A-C544-49C0-88D0-7803B08C6FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CAD25A-C544-49C0-88D0-7803B08C6FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7953C0E-19B1-4712-B0A5-CA0A1C2926F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7953C0E-19B1-4712-B0A5-CA0A1C2926F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7953C0E-19B1-4712-B0A5-CA0A1C2926F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7953C0E-19B1-4712-B0A5-CA0A1C2926F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAACFBF9-2186-4245-8261-41C4FB6FB6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAACFBF9-2186-4245-8261-41C4FB6FB6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAACFBF9-2186-4245-8261-41C4FB6FB6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAACFBF9-2186-4245-8261-41C4FB6FB6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27142127-1495-4316-B402-6AE4F4FD83D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27142127-1495-4316-B402-6AE4F4FD83D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27142127-1495-4316-B402-6AE4F4FD83D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27142127-1495-4316-B402-6AE4F4FD83D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
