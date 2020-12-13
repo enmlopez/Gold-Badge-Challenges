@@ -27,29 +27,6 @@ namespace _02_KodomoClaimsRepo
             DateOfClaim = dateOfClaim;
             IsValid = isValid;
         }
+        
     }
-    //public class Home : Car
-    //{
-    //    public Home(int claimId, string claimType, string description, double claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
-    //    {
-    //        ClaimId = claimId;
-    //        ClaimType = claimType;
-    //        Description = description;
-    //        ClaimAmount = claimAmount;
-    //        DateOfIncident = dateOfIncident;
-    //        DateOfClaim = dateOfClaim;
-    //    }
-    //}
-    //public class Theft : Car
-    //{
-    //    public Theft(int claimId, string claimType, string description, double claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
-    //    {
-    //        ClaimId = claimId;
-    //        ClaimType = claimType;
-    //        Description = description;
-    //        ClaimAmount = claimAmount;
-    //        DateOfIncident = dateOfIncident;
-    //        DateOfClaim = dateOfClaim;
-    //    }
-    //}
 }
