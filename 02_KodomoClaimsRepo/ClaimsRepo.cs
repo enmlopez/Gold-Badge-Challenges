@@ -20,7 +20,6 @@ namespace _02_KodomoClaimsRepo
         {
             return quClaims;
         }
-        //Update?
 
         //Remove
         public void RemoveClaimFromQu()

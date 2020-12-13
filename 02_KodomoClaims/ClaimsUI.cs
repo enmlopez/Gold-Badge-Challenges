@@ -57,10 +57,16 @@ namespace _02_KodomoClaims
         {
             Console.Clear();
             Queue<Claims> claimsQu = _claimsRepo.SeeClaimQu();
-            Console.WriteLine("ClaimID" + "  " + "Type" + "      " + "Description" + "               " + "Amount" + "     " + "DateOfAccident" + "     " + "DateOfClaim" + "     " + "IsValid");
+            Console.WriteLine("ClaimID" + "  " + "Type" + "      " + "Description" + "               " + "Amount" + "         " + "DateOfAccident" + "     " + "DateOfClaim" + "     " + "IsValid");
             foreach (Claims claims in claimsQu)
             {
-                Console.WriteLine($"{claims.ClaimId}" + "        " + $"{claims.ClaimType.PadRight(4)}" + "     " + $"{claims.Description}" + "     " + $"{claims.ClaimAmount}" + "     " + $"{claims.DateOfIncident}" + "     " + $"{claims.DateOfClaim}" + "     " + $"{claims.IsValid}\n");
+                Console.WriteLine($"{claims.ClaimId,-9}" +
+                    $"{claims.ClaimType,-9} " +
+                    $"{claims.Description,-25} " +
+                    $"{claims.ClaimAmount,-15:C2}" +
+                    $"{claims.DateOfIncident.ToString("MM/dd/yyyy"),-19}" +
+                    $"{claims.DateOfClaim.ToString("MM/dd/yyyy"),-16}" +
+                    $"{claims.IsValid}\n");
             }
             Console.WriteLine("Press any key to continue");
             Console.ReadLine();
@@ -77,9 +83,9 @@ namespace _02_KodomoClaims
                     $"Claim ID: {firstIn.ClaimId}\n" +
                     $"Type: {firstIn.ClaimType}\n" +
                     $"Description: {firstIn.Description}\n" +
-                    $"Amount: {firstIn.ClaimAmount}\n" +
-                    $"DateOfAccident: {firstIn.DateOfIncident}\n" +
-                    $"DateOfClaim: {firstIn.DateOfClaim}\n" +
+                    $"Amount: {firstIn.ClaimAmount:C2}\n" +
+                    $"DateOfAccident: {firstIn.DateOfIncident.ToString("MM/dd/yyyy")}\n" +
+                    $"DateOfClaim: {firstIn.DateOfClaim.ToString("MM/dd/yyyy")}\n" +
                     $"IsValid: {firstIn.IsValid}\n\n" +
                     $"Do you want to deal with this claim now? (y/n)");
                 string input = Console.ReadLine().ToLower();
@@ -156,9 +162,9 @@ namespace _02_KodomoClaims
             DateTime theftDateStart = new DateTime(2018, 4, 27);
             DateTime theftDateEnd = new DateTime(2018, 6, 01);
 
-            Claims carClaim = new Claims(1, "Car  ", "Car accident on 465  ", 400.001, carDateStart, carDateEnd, true);
-            Claims homeClaim = new Claims(2, "Home ", "House fire in Kitchen", 4000.001, homeDateStart, homeDateEnd, true);
-            Claims theftClaim = new Claims(3, "Theft", "Stolen pancakes      ", 4.001, theftDateStart, theftDateEnd, false);
+            Claims carClaim = new Claims(1, "Car", "Car accident on 465", 400.00, carDateStart, carDateEnd, true);
+            Claims homeClaim = new Claims(2, "Home", "House fire in Kitchen", 4000.00, homeDateStart, homeDateEnd, true);
+            Claims theftClaim = new Claims(3, "Theft", "Stolen pancakes", 4.00, theftDateStart, theftDateEnd, false);
 
             _claimsRepo.AddClaimsToQu(carClaim);
             _claimsRepo.AddClaimsToQu(homeClaim);
