@@ -14,10 +14,11 @@ namespace _03_KomodoRepo
         public void AddBadgestoDict(Badges newBadge)
         {
             _dictionaryBadges.Add(newBadge.BadgeId, newBadge);
-            
+
         }
-        public void AddDoorsToBadge(Badges badge, string anotherDoor)
+        public void AddDoorsToBadge(int badgeId, string anotherDoor)
         {
+            Badges badge = GetBadgeById(badgeId);
             badge.DoorNames.Add(anotherDoor);
         }
         //Read
@@ -28,19 +29,25 @@ namespace _03_KomodoRepo
         //Update
         public bool UpdateDict(int badgeId, Badges newBadge)
         {
-            return true;
+            Badges oldBadge = GetBadgeById(badgeId);
+            if (oldBadge != null)
+            {
+                oldBadge.BadgeId = newBadge.BadgeId;
+                oldBadge.DoorNames = newBadge.DoorNames;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         //Delete
-        public void DelDoorFromBadge(Badges badge, string removeDoor)
+        public void DelDoorFromBadge(int badgeId, string removeDoor)
         {
+            Badges badge = GetBadgeById(badgeId);
             badge.DoorNames.Remove(removeDoor);
         }
-        public void GetList()
-        {
-           
-
-
-        }
+        //Helper
         public Badges GetBadgeById(int badgeId)
         {
             foreach (Badges badge in _dictionaryBadges.Values)
