@@ -9,7 +9,7 @@ namespace _03_KomodoRepo
     public class Badges
     {
         public int BadgeId { get; set; }
-        public List<string> DoorNames { get; set; }
+        public List<string> DoorNames { get; set; } = new List<string>();
         public Badges() { }
         public Badges(int badgeId, List<string> doorNames)
         {
@@ -17,4 +17,12 @@ namespace _03_KomodoRepo
             DoorNames = doorNames;
         }
     }
+    //public class Doors
+    //{
+    //    public string DoorName { get; set; }
+    //    public Doors(string doorName)
+    //    {
+    //        DoorName = doorName;
+    //    }
+    //}
 }
