@@ -14,12 +14,15 @@ namespace _03_KomodoRepo
         public void AddBadgestoDict(Badges newBadge)
         {
             _dictionaryBadges.Add(newBadge.BadgeId, newBadge);
-
         }
         public void AddDoorsToBadge(int badgeId, string anotherDoor)
         {
             Badges badge = GetBadgeById(badgeId);
             badge.DoorNames.Add(anotherDoor);
+        }
+        public void AddDoorsUsingBadgeClass(Badges badges, string anotherDoor)
+        {
+            badges.DoorNames.Add(anotherDoor);
         }
         //Read
         public Dictionary<int, Badges> GetEntireDict()

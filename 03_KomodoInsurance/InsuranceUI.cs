@@ -38,6 +38,7 @@ namespace _03_KomodoInsurance
                         UpdateBadge();
                         break;
                     case "3":
+                        ListOfBadges();
                         break;
                     case "4":
                         keepRunning = false;
@@ -62,7 +63,7 @@ namespace _03_KomodoInsurance
             Console.WriteLine("List a door that it needs access to: (ex: A#)");
             string aDoor = Console.ReadLine();
 
-            _insuranceRepo.AddDoorsToBadge(badgeId, aDoor);
+            _insuranceRepo.AddDoorsUsingBadgeClass(newBadge, aDoor);
 
             Console.WriteLine("Any other doors (y/n)?");
             string anotherDoor = Console.ReadLine().ToLower();
@@ -71,7 +72,7 @@ namespace _03_KomodoInsurance
             {
                 Console.WriteLine("List a door that it needs access to: (ex: A#)");
                 string aDoor2 = Console.ReadLine();
-                _insuranceRepo.AddDoorsToBadge(badgeId, aDoor2);
+                _insuranceRepo.AddDoorsUsingBadgeClass(newBadge, aDoor2);
 
                 Console.WriteLine("Any other doors (y/n)?");
                 string anotherDoorDoor = Console.ReadLine().ToLower();
@@ -80,10 +81,9 @@ namespace _03_KomodoInsurance
                 {
                     Console.WriteLine("List a door that it needs access to: (ex: A#)");
                     string aDoor3 = Console.ReadLine();
-                    _insuranceRepo.AddDoorsToBadge(badgeId, aDoor3);
+                    _insuranceRepo.AddDoorsUsingBadgeClass(newBadge, aDoor3);
                 }
             }
-
             _insuranceRepo.AddBadgestoDict(newBadge);
             WriteDictionaryOut();
 
@@ -97,12 +97,11 @@ namespace _03_KomodoInsurance
             WriteDictionaryOut();
 
             Badges newBadge = new Badges();
-            Console.WriteLine("What Badge ID would you like to update?");
+            Console.WriteLine("\nWhat Badge ID would you like to update?");
             int input = int.Parse(Console.ReadLine());
             newBadge.BadgeId = input;
 
-            Console.ReadLine();
-            Console.WriteLine("What would you like to do?\n" +
+            Console.WriteLine("\nWhat would you like to do?\n" +
                 "1. Add a door\n" +
                 "2. Remove a door");
             int addOrRemove = int.Parse(Console.ReadLine());
@@ -112,7 +111,7 @@ namespace _03_KomodoInsurance
                     Console.WriteLine("List a door to add: (ex: A#)");
                     string addDoor = Console.ReadLine();
                     _insuranceRepo.AddDoorsToBadge(input, addDoor);
-
+                    Console.Clear();
                     WriteDictionaryOut();
 
                     foreach (string door in newBadge.DoorNames)
@@ -124,6 +123,7 @@ namespace _03_KomodoInsurance
                     Console.WriteLine("List a door to remove: (ex: A#)");
                     string removeDoor = Console.ReadLine();
                     _insuranceRepo.DelDoorFromBadge(input, removeDoor);
+                    Console.Clear();
                     WriteDictionaryOut();
                     foreach (string door in newBadge.DoorNames)
                     {
@@ -136,13 +136,21 @@ namespace _03_KomodoInsurance
 
             if (wasUpdated)
             {
-                Console.WriteLine("Content successfully updated");
+                Console.WriteLine("Badge was successfully updated");
             }
             else
             {
-                Console.WriteLine("Could not update content");
+                Console.WriteLine("Could not update Badge");
             }
             
+            Console.ReadLine();
+        }
+        private void ListOfBadges()
+        {
+            Console.Clear();
+
+            WriteDictionaryOut();
+
             Console.ReadLine();
         }
         private void SeedDictionary()
@@ -163,7 +171,7 @@ namespace _03_KomodoInsurance
             Dictionary<int, Badges> badgeDirectory = _insuranceRepo.GetEntireDict();
             foreach (KeyValuePair<int, Badges> kvp in badgeDirectory)
             {
-                Console.WriteLine($"\nKey = {kvp.Key} has access to:");
+                Console.WriteLine($"\nBadge ID = {kvp.Key} has access to:");
 
                 foreach (string door in kvp.Value.DoorNames)
                 {

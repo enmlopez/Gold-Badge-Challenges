@@ -17,12 +17,4 @@ namespace _03_KomodoRepo
             DoorNames = doorNames;
         }
     }
-    //public class Doors
-    //{
-    //    public string DoorName { get; set; }
-    //    public Doors(string doorName)
-    //    {
-    //        DoorName = doorName;
-    //    }
-    //}
 }
