@@ -11,7 +11,6 @@ namespace _04_KomodoOutings
     class UI_Outings
     {
         OutingRepository _outingsRepo = new OutingRepository();
-        List<Outings> newList = new List<Outings>();
         public void Run()
         {
             SeedOutings();

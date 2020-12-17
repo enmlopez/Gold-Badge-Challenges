@@ -12,7 +12,9 @@ Kodomo Claims console app allows the user to view all of the claims in the depar
 
 Kodomo Badges console app maintains a collection of employee badge information.  Each Badge holds a Badge ID (Key) that is able to access doors (value) in the Komodo facility.  The console app allows the user to create, edit, and list all of the badges available.
 
+##### Challenge 4: Kodomo Outings
 
+Kodomo Outings console app allows the user to create Outing events  for the company.  You are able to see all of the Outings and calculate the cost per Events or the Total Cost of Events.
 
 MIT License
 
