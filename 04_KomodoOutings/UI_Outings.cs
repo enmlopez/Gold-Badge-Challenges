@@ -43,6 +43,7 @@ namespace _04_KomodoOutings
                         CostByTypeOfEvent();
                         break;
                     case 4:
+                        CostOfAllEvents();
                         break;
                     case 5:
                         keepRunning = false;
@@ -111,34 +112,39 @@ namespace _04_KomodoOutings
             switch (chooseType)
             {
                 case 1:
-                    double costOfEvent = _outingsRepo.TestCostPerType(enumEventTypes.Golf);
-                    Console.WriteLine(costOfEvent);
+                    double costOfGolfEvent = _outingsRepo.TestCostPerType(enumEventTypes.Golf);
+                    Console.WriteLine($"Total Cost of Golf Outings: {costOfGolfEvent:C2}");
                     Console.ReadLine();
                     break;
+                case 2:
+                    double costOfBowlingEvent = _outingsRepo.TestCostPerType(enumEventTypes.Bowling);
+                    Console.WriteLine($"Total Cost of Bowling Outings: {costOfBowlingEvent:C2}");
+                    Console.ReadLine();
+                    break;
+                case 3:
+                    double costOfAmuEvent = _outingsRepo.TestCostPerType(enumEventTypes.Amusement_Park);
+                    Console.WriteLine($"Total Cost of Amusement Park Outings: {costOfAmuEvent:C2}");
+                    Console.ReadLine();
+                    break;
+                case 4:
+                    double costOfConcertEvent = _outingsRepo.TestCostPerType(enumEventTypes.Concert);
+                    Console.WriteLine($"Total Cost of Concerts: {costOfConcertEvent:C2}");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Please try again");
+                    break;
             }
-            //chooseType = enumEventTypes.Golf;
-            //double costOfEvent = _outingsRepo.TestCostPerType(chooseType);
-            //Console.WriteLine(costOfEvent);
-            //Console.ReadLine();
+            Console.WriteLine("\nPress any key to continue");
+            Console.ReadLine();
+        }
+        private void CostOfAllEvents()
+        {
+            double totalCost = _outingsRepo.TotalCostEvents();
+            Console.WriteLine($"Total Cost of all Company Outings: {totalCost:C2}");
 
-            
-
-
-
-            //Outings outings = _outingsRepo.CostPerType();
-            //Console.WriteLine($"{outings.TotalCostPerType:C2}");
-           
-
-
-
-
-            //foreach (Outings test in newList)
-            //{
-            //    test.TotalCostPerType = test.NumberOfAttendees * test.CostPerPerson;
-            //    Console.WriteLine($"{test.TotalCostPerType:C2}");
-
-            //}
-            //Console.ReadLine();
+            Console.WriteLine("\nPress any key to continue");
+            Console.ReadLine();
         }
         private void SeedOutings()
         {
