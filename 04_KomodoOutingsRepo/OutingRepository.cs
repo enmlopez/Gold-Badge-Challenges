@@ -17,33 +17,26 @@ namespace _04_KomodoOutingsRepo
         {
             return listOfOutings;
         }
-        public double TestCostPerType(enumEventTypes test1)
+        public double TestCostPerType(enumEventTypes enumEvents)
         {
-            double test = 0;
-            foreach(Outings outings in listOfOutings)
+            double totalCost = 0;
+            foreach (Outings outings in listOfOutings)
             {
-                //filter so that only one enumEventType passes through
-                test += outings.CostPerPerson * outings.NumberOfAttendees;
+                if (enumEvents == outings.EventTypes)
+                {
+                    totalCost = outings.CostPerPerson * outings.NumberOfAttendees;
+                }
             }
-            return test;
+            return totalCost;
         }
-        public Outings CostPerType()
+        public double TotalCostEvents()
         {
-            foreach(Outings outings in listOfOutings)
+            double totalCost = 0;
+            foreach (Outings outings in listOfOutings)
             {
-                outings.TotalCostPerType = outings.CostPerPerson * outings.NumberOfAttendees;
-                return outings;
+                totalCost += outings.CostPerPerson * outings.NumberOfAttendees;
             }
-            return null;
-        }
-        public void CostByTypeEvent()
-        {
-            foreach(Outings outings in listOfOutings)
-            {
-                outings.TotalCostPerType = outings.CostPerPerson * outings.NumberOfAttendees;
-                Console.WriteLine($"{outings.TotalCostPerType:C2}");
-            }
-                Console.ReadLine();
+            return totalCost;
         }
     }
 }
