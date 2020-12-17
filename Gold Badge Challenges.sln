@@ -21,6 +21,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_KomodoInsuranceRepo", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_TestKodomoInsurance", "03_TestKodomoInsurance\03_TestKodomoInsurance.csproj", "{27142127-1495-4316-B402-6AE4F4FD83D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_KomodoOutings", "04_KomodoOutings\04_KomodoOutings.csproj", "{F1AB0DB7-D7CD-4B3C-9341-8CE3F22F478E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_KomodoOutingsRepo", "04_KomodoOutingsRepo\04_KomodoOutingsRepo.csproj", "{82197464-28CE-47A1-AD44-86D791EF82DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_KomodoOutingsTest", "04_KomodoOutingsTest\04_KomodoOutingsTest.csproj", "{FA34B4DE-6E98-4E20-9FE7-356B80058938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +69,18 @@ Global
 		{27142127-1495-4316-B402-6AE4F4FD83D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27142127-1495-4316-B402-6AE4F4FD83D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27142127-1495-4316-B402-6AE4F4FD83D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AB0DB7-D7CD-4B3C-9341-8CE3F22F478E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AB0DB7-D7CD-4B3C-9341-8CE3F22F478E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AB0DB7-D7CD-4B3C-9341-8CE3F22F478E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AB0DB7-D7CD-4B3C-9341-8CE3F22F478E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82197464-28CE-47A1-AD44-86D791EF82DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82197464-28CE-47A1-AD44-86D791EF82DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82197464-28CE-47A1-AD44-86D791EF82DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82197464-28CE-47A1-AD44-86D791EF82DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA34B4DE-6E98-4E20-9FE7-356B80058938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA34B4DE-6E98-4E20-9FE7-356B80058938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA34B4DE-6E98-4E20-9FE7-356B80058938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA34B4DE-6E98-4E20-9FE7-356B80058938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
