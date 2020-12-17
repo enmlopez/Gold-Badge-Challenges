@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_KodomoClaims
+namespace _04_KomodoOutings
 {
-    class KomodoClaimApp
+    class Program
     {
         static void Main(string[] args)
         {
-            ClaimsUI claimApp = new ClaimsUI();
-            claimApp.Run();
-
+            UI_Outings outingsProgram = new UI_Outings();
+            outingsProgram.Run();
         }
     }
 }
