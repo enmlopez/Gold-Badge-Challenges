@@ -162,5 +162,6 @@ namespace _04_KomodoOutings
             _outingsRepo.AddOutingToList(bowlingEvent);
             _outingsRepo.AddOutingToList(amuParkEvent);
         }
+        
     }
 }
