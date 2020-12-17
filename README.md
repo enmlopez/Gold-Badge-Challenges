@@ -16,6 +16,10 @@ Kodomo Badges console app maintains a collection of employee badge information. 
 
 Kodomo Outings console app allows the user to create Outing events  for the company.  You are able to see all of the Outings and calculate the cost per Events or the Total Cost of Events.
 
+##### Challenge 5: Kodomo Email
+
+Kodomo Emailconsole app allows the user to create, add, delete and update members in their database.  It will show you the List in alphabetical order.  The List is separated by different types (Current, Past, and Potential) each of which contain a specific email.
+
 MIT License
 
 Copyright (c) [2020] [KodomoProject]
