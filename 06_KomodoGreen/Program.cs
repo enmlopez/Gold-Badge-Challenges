@@ -10,6 +10,8 @@ namespace _06_KomodoGreen
     {
         static void Main(string[] args)
         {
+            UI_KomodoGreen program = new UI_KomodoGreen();
+            program.Run();
         }
     }
 }
