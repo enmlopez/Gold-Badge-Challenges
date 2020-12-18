@@ -18,7 +18,11 @@ Kodomo Outings console app allows the user to create Outing events  for the comp
 
 ##### Challenge 5: Kodomo Email
 
-Kodomo Emailconsole app allows the user to create, add, delete and update members in their database.  It will show you the List in alphabetical order.  The List is separated by different types (Current, Past, and Potential) each of which contain a specific email.
+Kodomo Email console app allows the user to create, add, delete and update members in their database.  It will show you the List in alphabetical order.  The List is separated by different types (Current, Past, and Potential) each of which contain a specific email.
+
+##### Challenge 6: Kodomo Green
+
+Kodomo Green console app allows the user to create, add, delete and update cars in their database.  It shows the user a List of all cars available as well as all of the electric, hybrid and gas powered vehicles respectively in their own filter.  The Cars class provides general information with the eventual hope that the collected data will help Komodo Insurance with various comparisons in the future.
 
 MIT License
 
